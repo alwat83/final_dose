@@ -1,0 +1,21 @@
+<form (submit)="addMedication()">
+  <div>
+    <label for="medicationName">Medication Name:</label>
+    <input type="text" id="medicationName" name="medicationName" [(ngModel)]="newMedicationName" required>
+  </div>
+  <div>
+    <label for="dosage">Dosage:</label>
+    <input type="text" id="dosage" name="dosage" [(ngModel)]="newMedicationDosage" required>
+  </div>
+  <button type="submit">Add Medication</button>
+</form>
+
+<div *ngIf="medications.length > 0">
+  <h2>Medication List:</h2>
+  <ul>
+    <li *ngFor="let medication of medications; let i = index">
+      {{ medication.name }} - {{ medication.dosage }}
+      <button (click)="removeMedication(i)">Remove</button>
+    </li>
+  </ul>
+</div>

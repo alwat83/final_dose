@@ -1,6 +1,36 @@
-<div>
-  <h1>Welcome to MyApp</h1>
-  <p>This is the main content of the project.</p>
-  <app-login></app-login>
-  <app-register></app-register>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyApp</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/medication-search">Medication Search</a></li>
+        <li><a href="/medication-tracking">Medication Tracking</a></li>
+        <li><a href="/dosage-correction">Dosage Correction</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h1>Welcome to MyApp</h1>
+      <p>This is the main content of the project.</p>
+    </section>
+    <section>
+      <app-login></app-login>
+    </section>
+    <section>
+      <app-register></app-register>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2023 MyApp. All rights reserved.</p>
+  </footer>
+</body>
+</html>
