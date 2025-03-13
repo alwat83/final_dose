@@ -62,7 +62,19 @@
 - **Medication Tracking:** Users should be able to add medications to their profile and track their dosage.
 - **Dosage correction:** Users should be able to contribute to correct dosage data.
 
--   (To be determined)
+### Backend Implementation Steps
+
+* Set up a new Node.js project for the backend in a separate repository as mentioned in the `project_outline.md`.
+* Install necessary dependencies such as Express, body-parser, and any other required packages.
+* Create the main server file (e.g., `server.js` or `app.js`) to initialize the Express server and set up middleware.
+* Set up routes for user authentication, medication search, medication tracking, and dosage correction.
+* Implement controllers for handling the logic of each route.
+* Connect to the Cloud SQL database and set up models for users, medications, and dosage corrections.
+* Implement services for interacting with the database and performing CRUD operations.
+* Ensure proper error handling and validation for all routes and services.
+* Set up environment variables for sensitive information such as database credentials.
+* Write unit tests for the backend using Jest.
+* Document the API endpoints and their usage.
 
 ## Deployment
 
