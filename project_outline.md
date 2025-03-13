@@ -90,3 +90,19 @@
   - Freemium model.
   - Free account with essential features.
   - Premium subscription for advanced features and support.
+
+## Next Steps
+
+- **Implement Core Features:**
+  - Medication Search: Users need to be able to search for and select their medications.
+  - Medication Tracking: Users should be able to add medications to their profile and track their dosage.
+  - Dosage Correction: Users should be able to contribute to correct dosage data.
+
+- **Design UI:**
+  - Create sketch screens.
+  - Define visual style.
+
+- **Plan Deployment:**
+  - Define deployment strategy.
+  - Set up environments.
+  - Configure cloud provider.
