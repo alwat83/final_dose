@@ -76,6 +76,43 @@
 * Write unit tests for the backend using Jest.
 * Document the API endpoints and their usage.
 
+## Backend Setup Steps
+
+* Set up a new Node.js project for the backend in a separate repository.
+* Install necessary dependencies such as Express and body-parser.
+* Create the main server file to initialize the Express server and set up middleware.
+* Set up routes for user authentication, medication search, medication tracking, and dosage correction.
+* Implement controllers for handling the logic of each route.
+* Connect to the Cloud SQL database and set up models for users, medications, and dosage corrections.
+* Implement services for interacting with the database and performing CRUD operations.
+* Write unit tests for the backend using Jest.
+* Document the API endpoints and their usage.
+
+## Backend Dependencies
+
+* Express
+* body-parser
+
+## Backend Routes
+
+* User authentication
+* Medication search
+* Medication tracking
+* Dosage correction
+
+## Backend Controllers
+
+* User authentication controller
+* Medication search controller
+* Medication tracking controller
+* Dosage correction controller
+
+## Backend Models
+
+* User model
+* Medication model
+* Dosage correction model
+
 ## Deployment
 
 -   (To be determined)
