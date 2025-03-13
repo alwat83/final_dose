@@ -1,0 +1,15 @@
+<form (submit)="submitCorrection()">
+  <div>
+    <label for="medicationName">Medication Name:</label>
+    <input type="text" id="medicationName" name="medicationName" [(ngModel)]="medicationName" required>
+  </div>
+  <div>
+    <label for="dosage">Dosage:</label>
+    <input type="text" id="dosage" name="dosage" [(ngModel)]="dosage" required>
+  </div>
+  <div>
+    <label for="correction">Correction:</label>
+    <input type="text" id="correction" name="correction" [(ngModel)]="correction" required>
+  </div>
+  <button type="submit">Submit Correction</button>
+</form>

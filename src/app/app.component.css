@@ -1,0 +1,96 @@
+/* Main content styles */
+main {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation bar styles */
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Login component styles */
+app-login {
+  display: block;
+  margin: 20px 0;
+}
+
+app-login form {
+  display: flex;
+  flex-direction: column;
+}
+
+app-login form div {
+  margin-bottom: 10px;
+}
+
+app-login form label {
+  font-weight: bold;
+}
+
+app-login form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Register component styles */
+app-register {
+  display: block;
+  margin: 20px 0;
+}
+
+app-register form {
+  display: flex;
+  flex-direction: column;
+}
+
+app-register form div {
+  margin-bottom: 10px;
+}
+
+app-register form label {
+  font-weight: bold;
+}
+
+app-register form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
