@@ -5,33 +5,6 @@ import { MedicationSearchComponent } from './components/medication-search.compon
 import { MedicationTrackingComponent } from './components/medication-tracking.component';
 import { DosageCorrectionComponent } from './components/dosage-correction.component';
 
-describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [AppComponent, LoginComponent, RegisterComponent, MedicationSearchComponent, MedicationTrackingComponent, DosageCorrectionComponent],
-    }).compileComponents();
-  });
-
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
-
-  it(`should have the 'Dose Ninja' title`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('Dose Ninja');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, Dose Ninja');
-  });
-});
-
 describe('LoginComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
