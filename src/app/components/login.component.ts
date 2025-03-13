@@ -4,7 +4,7 @@ import { User } from '../user';
 
 @Component({
   selector: 'app-login',
-  template: '',
+  templateUrl: './login.component.html',
 })
 export class LoginComponent {
   username!: string;
