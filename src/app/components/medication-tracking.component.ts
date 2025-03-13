@@ -9,19 +9,30 @@ export class MedicationTrackingComponent {
   medications: { name: string, dosage: string }[] = [];
   newMedicationName: string = '';
   newMedicationDosage: string = '';
+  errorMessage: string | null = null;
 
   addMedication() {
-    if (this.newMedicationName && this.newMedicationDosage) {
-      this.medications.push({
-        name: this.newMedicationName,
-        dosage: this.newMedicationDosage
-      });
-      this.newMedicationName = '';
-      this.newMedicationDosage = '';
+    try {
+      if (this.newMedicationName && this.newMedicationDosage) {
+        this.medications.push({
+          name: this.newMedicationName,
+          dosage: this.newMedicationDosage
+        });
+        this.newMedicationName = '';
+        this.newMedicationDosage = '';
+      }
+    } catch (error) {
+      this.errorMessage = (error as Error).message;
+      console.error('Add Medication Error:', error);
     }
   }
 
   removeMedication(index: number) {
-    this.medications.splice(index, 1);
+    try {
+      this.medications.splice(index, 1);
+    } catch (error) {
+      this.errorMessage = (error as Error).message;
+      console.error('Remove Medication Error:', error);
+    }
   }
 }

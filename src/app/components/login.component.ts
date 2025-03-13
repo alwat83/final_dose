@@ -9,11 +9,20 @@ import { User } from '../user';
 export class LoginComponent {
   username!: string;
   password!: string;
+  errorMessage: string | null = null;
 
   constructor(private userService: UserService) {}
 
   login(username: string, password: string): void {
-    const result: User | null = this.userService.login(username, password);
-    console.log('Login Result:', result);
+    try {
+      const result: User | null = this.userService.login(username, password);
+      if (!result) {
+        throw new Error('Invalid username or password');
+      }
+      console.log('Login Result:', result);
+    } catch (error) {
+      this.errorMessage = (error as Error).message;
+      console.error('Login Error:', error);
+    }
   }
 }
