@@ -1,0 +1,11 @@
+<div>
+  <label for="search">Search Medication:</label>
+  <input type="text" id="search" [(ngModel)]="searchQuery" (input)="searchMedication()">
+</div>
+<div *ngIf="searchResults.length > 0">
+  <ul>
+    <li *ngFor="let result of searchResults">
+      {{ result.name }}
+    </li>
+  </ul>
+</div>

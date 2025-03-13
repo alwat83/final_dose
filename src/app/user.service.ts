@@ -23,6 +23,21 @@ export class UserService {
     return null;
   }
 
+  searchMedication(query: string): any[] {
+    // Implement medication search logic here
+    return [];
+  }
+
+  addMedication(medication: any): any {
+    // Implement medication tracking logic here
+    return medication;
+  }
+
+  correctDosage(dosageCorrection: any): any {
+    // Implement dosage correction logic here
+    return dosageCorrection;
+  }
+
   private generateUniqueId(): string {
     return Math.random().toString(36).substring(2, 15);
   }

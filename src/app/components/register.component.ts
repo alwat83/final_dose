@@ -4,12 +4,13 @@ import { User } from '../user';
 
 @Component({
   selector: 'app-register',
-  template: ``,
+  templateUrl: './register.component.html',
 })
 export class RegisterComponent {
   username = '';
   password = '';
   email = '';
+  errorMessage: string | null = null;
 
   constructor(private userService: UserService) {}
 
@@ -20,7 +21,12 @@ export class RegisterComponent {
       email: this.email,
       password: this.password,
     };
-    const result = this.userService.register(newUser);
-    console.log('Registration result:', result);
+    try {
+      const result = this.userService.register(newUser);
+      console.log('Registration result:', result);
+      this.errorMessage = null;
+    } catch (error) {
+      this.errorMessage = 'Registration failed. Please try again.';
+    }
   }
 }

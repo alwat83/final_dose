@@ -1,0 +1,21 @@
+<form (submit)="correctDosage()">
+  <div>
+    <label for="medicationName">Medication Name:</label>
+    <input type="text" id="medicationName" [(ngModel)]="medicationName" name="medicationName" required>
+  </div>
+  <div>
+    <label for="currentDosage">Current Dosage:</label>
+    <input type="text" id="currentDosage" [(ngModel)]="currentDosage" name="currentDosage" required>
+  </div>
+  <div>
+    <label for="correctedDosage">Corrected Dosage:</label>
+    <input type="text" id="correctedDosage" [(ngModel)]="correctedDosage" name="correctedDosage" required>
+  </div>
+  <button type="submit">Correct Dosage</button>
+</form>
+
+<ul>
+  <li *ngFor="let dosage of correctedDosages">
+    {{ dosage.medicationName }} - {{ dosage.currentDosage }} - {{ dosage.correctedDosage }}
+  </li>
+</ul>
