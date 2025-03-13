@@ -1,17 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MedicationTrackingService } from '../services/medication-tracking.service';
 
 @Component({
   selector: 'app-medication-tracking',
   templateUrl: './medication-tracking.component.html',
 })
-export class MedicationTrackingComponent {
+export class MedicationTrackingComponent implements OnInit {
   medicationName: string = '';
   dosage: string = '';
   frequency: string = '';
   trackedMedications: any[] = [];
 
   constructor(private medicationTrackingService: MedicationTrackingService) {}
+
+  ngOnInit() {
+    this.getTrackedMedications();
+  }
 
   addMedication() {
     const medication = {
