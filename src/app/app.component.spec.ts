@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login.component';
 import { RegisterComponent } from './components/register.component';
 import { MedicationSearchComponent } from './components/medication-search.component';
@@ -9,7 +8,7 @@ import { DosageCorrectionComponent } from './components/dosage-correction.compon
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent],
+      declarations: [AppComponent, LoginComponent, RegisterComponent, MedicationSearchComponent, MedicationTrackingComponent, DosageCorrectionComponent],
     }).compileComponents();
   });
 
