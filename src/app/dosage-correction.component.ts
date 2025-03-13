@@ -1,17 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DosageCorrectionService } from '../services/dosage-correction.service';
 
 @Component({
   selector: 'app-dosage-correction',
   templateUrl: './dosage-correction.component.html',
 })
-export class DosageCorrectionComponent {
+export class DosageCorrectionComponent implements OnInit {
   medicationName: string = '';
   currentDosage: string = '';
   correctedDosage: string = '';
   correctedDosages: any[] = [];
 
   constructor(private dosageCorrectionService: DosageCorrectionService) {}
+
+  ngOnInit() {
+    this.getCorrectedDosages();
+  }
 
   correctDosage() {
     const dosageCorrection = {
