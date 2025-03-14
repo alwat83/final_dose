@@ -26,7 +26,12 @@ import { routes } from './app.routes';
     DosageCorrectionComponent,
   ],
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    RegisterComponent,
+    MedicationSearchComponent,
+    MedicationTrackingComponent,
+    DosageCorrectionComponent
   ],
   providers: [],
 })
