@@ -13,9 +13,9 @@ export class LoginComponent {
 
   constructor(private userService: UserService) {}
 
-  login(username: string, password: string): void {
+  login(): void {
     try {
-      const result: User | null = this.userService.login(username, password);
+      const result: User | null = this.userService.login(this.username, this.password);
       if (!result) {
         throw new Error('Invalid username or password');
       }
