@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { AppComponent } from './app.component';
+import { AppComponent } from './app.component'; // Assuming AppComponent is standalone
 import { LoginComponent } from './components/login.component';
 import { RegisterComponent } from './components/register.component';
 import { MedicationSearchComponent } from './components/medication-search.component';
@@ -12,20 +12,17 @@ import { DosageCorrectionComponent } from './components/dosage-correction.compon
 import { routes } from './app.routes';
 
 @NgModule({
-  declarations: [
-    AppComponent,
+  imports: [
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot(routes),
+    AppComponent, // Import the standalone AppComponent
     LoginComponent,
     RegisterComponent,
     MedicationSearchComponent,
     MedicationTrackingComponent,
-    DosageCorrectionComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    RouterModule.forRoot(routes)
+    DosageCorrectionComponent,
   ],
   providers: [],
-  bootstrap: [AppComponent]
 })
 export class AppModule { }
