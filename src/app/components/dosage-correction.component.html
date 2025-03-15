@@ -1,4 +1,4 @@
-<form (submit)="submitCorrection()">
+<form (ngSubmit)="submitCorrection()">
   <div>
     <label for="medicationName">Medication Name:</label>
     <input type="text" id="medicationName" name="medicationName" [(ngModel)]="medicationName" required>

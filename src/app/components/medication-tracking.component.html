@@ -1,4 +1,4 @@
-<form (submit)="addMedication()">
+<form (ngSubmit)="addMedication()">
   <div>
     <label for="medicationName">Medication Name:</label>
     <input type="text" id="medicationName" name="medicationName" [(ngModel)]="newMedicationName" required>

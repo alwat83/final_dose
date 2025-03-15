@@ -1,4 +1,4 @@
-<form (submit)="searchMedication()">
+<form (ngSubmit)="searchMedication()">
   <div>
     <label for="searchQuery">Search Medication:</label>
     <input type="text" id="searchQuery" name="searchQuery" [(ngModel)]="searchQuery" required>

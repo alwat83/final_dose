@@ -1,10 +1,20 @@
 import { Component } from '@angular/core';
+import { LoginComponent } from './components/login.component';
+import { RegisterComponent } from './components/register.component';
+import { MedicationSearchComponent } from './components/medication-search.component';
+import { MedicationTrackingComponent } from './components/medication-tracking.component';
+import { DosageCorrectionComponent } from './components/dosage-correction.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  imports: [
+    LoginComponent,
+    RegisterComponent,
+    MedicationSearchComponent,
+    MedicationTrackingComponent,
+    DosageCorrectionComponent,
+  ],
+  standalone: true,
 })
-export class AppComponent {
-  title = 'Dose Ninja';
-}
+export class AppComponent {}
