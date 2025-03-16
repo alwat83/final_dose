@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
 import { UserService } from '../user.service';
 import { User } from '../user';
+import { CommonModule } from '@angular/common'; // Import CommonModule
+import { FormsModule } from '@angular/forms'; // Import FormsModule
 
 @Component({
   selector: 'app-register',
+  standalone: true, // Add standalone property
+  imports: [CommonModule, FormsModule], // Add CommonModule and FormsModule to imports
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
 })
@@ -17,8 +21,8 @@ export class RegisterComponent {
 
   async register() {
     try {
-      const newUser: User = { // Use User, not Omit<User, 'id'>
-        id: '', // id is generated in the service
+      const newUser: User = {
+        id: '',
         username: this.username,
         email: this.email,
         password: this.password,
