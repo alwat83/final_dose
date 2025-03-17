@@ -18,5 +18,5 @@ import { DosageCorrectionComponent } from './components/dosage-correction.compon
   standalone: true,
 })
 export class AppComponent {
-  currentYear: number = new Date().getFullYear(); // Get the current year; <--- Added semicolon here
+  currentYear: number = new Date().getFullYear(); 
 }

@@ -1,0 +1,29 @@
+<div *ngIf="drugDetails">
+    <h2>{{ drugDetails.openfda?.brand_name?.[0] || 'Drug Details' }}</h2>
+  
+    <div *ngIf="drugDetails.openfda?.generic_name">
+      <p><strong>Generic Name:</strong> {{ drugDetails.openfda.generic_name.join(', ') }}</p>
+    </div>
+  
+    <div *ngIf="drugDetails.openfda?.manufacturer_name">
+      <p><strong>Manufacturer:</strong> {{ drugDetails.openfda.manufacturer_name.join(', ') }}</p>
+    </div>
+  
+    <div *ngIf="drugDetails.active_ingredient">
+      <p><strong>Active Ingredients:</strong> {{ drugDetails.active_ingredient.join(', ') }}</p>
+    </div>
+  
+    <div *ngIf="drugDetails.indications_and_usage">
+      <p><strong>Indications:</strong> {{ drugDetails.indications_and_usage.join(', ') }}</p>
+    </div>
+  
+    <div *ngIf="drugDetails.warnings">
+      <p><strong>Warnings:</strong> {{ drugDetails.warnings.join(', ') }}</p>
+    </div>
+  
+    <button (click)="addToTracking()">Add to Tracking</button>
+  </div>
+  
+  <div *ngIf="errorMessage">
+    <p>{{ errorMessage }}</p>
+  </div>
