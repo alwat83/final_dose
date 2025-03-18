@@ -1,36 +1,26 @@
-<div>
+<div class="app-container">
   <header>
     <nav>
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/medication-search">Medication Search</a></li>
-        <li><a href="/medication-tracking">Medication Tracking</a></li>
-        <li><a href="/dosage-correction">Dosage Correction</a></li>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/medication-search">Medication Search</a></li>
+        <li><a routerLink="/tracking-list">Medication Tracking</a></li>
+        <li><a routerLink="/dosage-correction">Dosage Correction</a></li>
+        <li><a routerLink="/login">Login</a></li>
+        <li><a routerLink="/register">Register</a></li>
+        <li><a routerLink="/test">Test Link</a></li>
+        <li><a routerLink="/test">Test Component</a></li>
       </ul>
     </nav>
   </header>
   <main>
     <section>
-      <h1>Welcome to Dose Ninja</h1>
-      <p>This is the main content of the project.</p>
+      <h1>Dose Ninja</h1>
+      <p>Your personalized medication management tool. Track your medications, correct dosages, and stay informed about your health.</p>
     </section>
-    <section>
-      <app-login></app-login>
-    </section>
-    <section>
-      <app-register></app-register>
-    </section>
-    <section>
-      <app-medication-search></app-medication-search>
-    </section>
-    <section>
-      <app-medication-tracking></app-medication-tracking>
-    </section>
-    <section>
-      <app-dosage-correction></app-dosage-correction>
-    </section>
+    <router-outlet></router-outlet>
   </main>
   <footer>
     <p>&copy; {{ currentYear }} Dose Ninja. All rights reserved.</p>
-</footer>
+  </footer>
 </div>

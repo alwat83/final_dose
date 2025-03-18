@@ -1,22 +1,13 @@
 import { Component } from '@angular/core';
-import { LoginComponent } from './components/login.component';
-import { RegisterComponent } from './components/register.component';
-import { MedicationSearchComponent } from './components/medication-search.component';
-import { MedicationTrackingComponent } from './components/medication-tracking.component';
-import { DosageCorrectionComponent } from './components/dosage-correction.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  imports: [
-    LoginComponent,
-    RegisterComponent,
-    MedicationSearchComponent,
-    MedicationTrackingComponent,
-    DosageCorrectionComponent,
-  ],
   standalone: true,
+  imports: [RouterOutlet],
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  currentYear: number = new Date().getFullYear(); 
+  currentYear: number = new Date().getFullYear();
 }
