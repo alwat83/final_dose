@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common'; // Import CommonModule
+import { FormsModule } from '@angular/forms'; // Import FormsModule
 
 @Component({
   selector: 'app-dosage-correction',
+  standalone: true, // Add standalone property
+  imports: [CommonModule, FormsModule], // Add CommonModule and FormsModule to imports
   templateUrl: './dosage-correction.component.html',
-  styleUrls: ['./dosage-correction.component.css']
+  styleUrls: ['./dosage-correction.component.css'],
 })
 export class DosageCorrectionComponent {
   medicationName: string = '';

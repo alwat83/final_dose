@@ -1,9 +1,18 @@
+import { Injectable } from '@angular/core';
 import { User } from './user';
 
+@Injectable({
+  providedIn: 'root', // Or add to module providers
+})
 export class UserService {
   private users: User[] = [];
 
   register(user: User): User {
+    const existingUser = this.users.find((u) => u.username === user.username);
+    if (existingUser) {
+      throw new Error('Username already exists.');
+    }
+
     const newUser: User = {
       id: this.generateUniqueId(),
       username: user.username,
@@ -15,12 +24,9 @@ export class UserService {
   }
 
   login(username: string, password: string): User | null {
-    for (const user of this.users) {
-      if (user.username === username && user.password === password) {
-        return user;
-      }
-    }
-    return null;
+    return this.users.find(
+      (user) => user.username === username && user.password === password
+    ) || null;
   }
 
   private generateUniqueId(): string {

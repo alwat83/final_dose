@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
 import { UserService } from '../user.service';
 import { User } from '../user';
+import { CommonModule } from '@angular/common'; // Import CommonModule
+import { FormsModule } from '@angular/forms'; // Import FormsModule
 
 @Component({
   selector: 'app-login',
+  standalone: true, // Add standalone property
+  imports: [CommonModule, FormsModule], // Add CommonModule and FormsModule to imports
   templateUrl: './login.component.html',
 })
 export class LoginComponent {

@@ -1,0 +1,19 @@
+<h2>Your Medication Tracking List</h2>
+
+<div *ngIf="trackingList.length > 0">
+  <ul>
+    <li *ngFor="let drug of trackingList">
+      <h3>{{ drug.openfda?.brand_name?.[0] || 'Drug Details' }}</h3>
+      <div *ngIf="drug.openfda?.generic_name">
+        <p><strong>Generic Name:</strong> {{ drug.openfda.generic_name.join(', ') }}</p>
+      </div>
+      <div *ngIf="drug.openfda?.manufacturer_name">
+        <p><strong>Manufacturer:</strong> {{ drug.openfda.manufacturer_name.join(', ') }}</p>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="trackingList.length === 0">
+  <p>Your tracking list is empty.</p>
+</div>
